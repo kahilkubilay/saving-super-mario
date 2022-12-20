@@ -1,0 +1,193 @@
+{
+  "sections": [
+    {
+      "id": 1,
+      "title": "countries and nationalities",
+      "details": "1 details lorem",
+      "complete": true,
+      "content": ["england", "ireland", "poland", "scotland", "spain", "turkey", "germany", "mexico", "the united states", "argentina", "brazil", "egypt", "hungary", "italy", "russia", "china", "japan", "the czech republic", "france", "switzerland", "english", "irish", "polish", "scottish", "spanish", "turkish", "germany", "german", "mexican", "american", "argentinian", "brazilian", "egyptian", "hungarian", "italian", "russian", "chinese", "japanese", "czech", "french", "swiss"],
+      "suggestion": "",
+      "loot": [{
+        "box": "1",
+        "star": "30",
+        "egg": "5"
+      }]
+    },
+    {
+      "id": 2,
+      "title": "classroom language",
+      "details": "2 details lorem ipsum",
+      "complete": false,
+      "content": ["open your books", "go to page 84", "do exercise a", "readt the text", "loot at the board", "close the door", "work in pairs", "answer the questions", "listen and repeat", "stand up", "sit down", "turn off your phone", "please stop talking", "can you repeat that", "i'm late", "i don't understand", "can i have a copy, please", "how do you spell it?", "I don't know", "how do you say gato in English?", "can you help me, please?", "what page is it?"],
+      "suggestion": "",
+      "loot": [{
+        "box": "1",
+        "star": "20",
+        "egg": "3"
+      }]
+    },
+    {
+      "id": 3,
+      "title": "Things",
+      "details": "3 details lorem ipsum tester test",
+      "complete": false,
+      "content": ["bag", "charger", "coin", "a credit card", "diary", "dictionary", "file", "glasses", "headphones", "identity card", "key", "lamp", "laptop", "magazine", "newspaper", "notebook", "pen", "pencil", "phone", "mobile phone", "photo", "piece of paper", "purse", "scissors", "sunglasses", "tablet", "ticket", "tissue", "umbrella", "wallet", "watch"],
+      "suggestion": "",
+      "loot": [{
+        "box": "1",
+        "star": "25",
+        "egg": "8"
+      }]
+    },
+    {
+      "id": 4,
+      "title": "adjectives",
+      "details": "4 details",
+      "complete": true,
+      "content": ["big", "beautiful", "cheap", "clean", "easy", "fast", "full", "good", "high", "hot", "light", "long", "old", "rich", "right", "safe", "the same", "strong", "tall", "ugly", "small", "expensive", "dirty", "difficult", "slow", "empty", "bad", "low", "cold", "dark", "short", "new", "young", "poor", "left", "wrong", "dangerous", "different", "weak", "short"],
+      "suggestion": "",
+      "loot": [{
+        "box": "1",
+        "star": "22",
+        "egg": "4"
+      }]
+    },
+    {
+      "id": 5,
+      "title": "verbs",
+      "details": "5 details lorem ipsum",
+      "complete": false,
+      "content": ["cook", "do", "drink", "drive", "eat", "go", "have", "like", "listen", "live", "need", "play", "read", "say", "speak", "study", "take", "want", "watch", "wear", "work"],
+      "suggestion": "",
+      "loot": [{
+        "box": "1",
+        "star": "20",
+        "egg": "3"
+      }]
+    },
+    {
+      "id": 6,
+      "title": "jobs",
+      "details": "6 details lorem ipsum",
+      "complete": false,
+      "content": ["accountant", "actor", "administrator", "architect", "builder", "chef", "cleaner", "dentist", "doctor", "engineer", "factory worker", "flight attendant", "footballer", "guide", "hairdresser", "journalist", "lawyer", "manager", "model", "musician", "nurse", "pilot", "police officer", "recepcionist", "shop assistant", "soldier", "taxi driver", "teacher", "vet", "waiter"],
+      "suggestion": "",
+      "loot": [{
+        "box": "1",
+        "star": "30",
+        "egg": "5"
+      }]
+    },
+    {
+      "id": 7,
+      "title": "the family",
+      "details": "1 details tester test tester",
+      "complete": false,
+      "content": ["father", "mother", "brother", "sister", "daughter", "son", "grandfather", "grandmother", "aunt", "uncle", "nephew", "niece", "cousin", "wife"],
+      "suggestion": "",
+      "loot": [{
+        "box": "1",
+        "star": "30",
+        "egg": "5"
+      }]
+    },
+    {
+      "id": 8,
+      "title": "daily routine",
+      "details": "2 details lorem ipsum",
+      "complete": true,
+      "content": ["have a shower", "have a coffee", "do the housework", "start work", "finish work", "get dressed", "wake up", "have lunch at work", "go shopping", "go to bed", "have pizza for dinner", "get home late", "go to work by bus", "put on make up", "check emails", "get to work", "go to italian classes", "get up", "have breakfast", "have a shave", "go home early", "walk to work", "relax", "take the dog for a walk", "sleep for eight hours", "make dinner", "have a bath", "see friends"],
+      "suggestion": "",
+      "loot": [{
+        "box": "1",
+        "star": "30",
+        "egg": "5"
+      }]
+    },
+    {
+      "id": 9,
+      "title": "verbs 2",
+      "details": "details",
+      "complete": false,
+      "content": ["buy", "call", "dance", "draw", "find", "forget", "give", "hear", "help", "help", "leave", "look for", "meet", "paint", "remember", "run", "see", "send", "sign", "swim", "take", "talk", "tell", "try", "use", "wait for"],
+      "suggestion": "",
+      "loot": [{
+        "box": "1",
+        "star": "30",
+        "egg": "5"
+      }]
+    },
+    {
+      "id": 10,
+      "title": "the weather",
+      "details": "4 details lorem",
+      "complete": false,
+      "content": ["sunny", "hot", "cloudy", "windy", "cold", "raining", "foggy", "snowing", "spring", "summer", "winter", "autumn"],
+      "loot": [{
+        "box": "1",
+        "star": "30",
+        "egg": "5"
+      }]
+    },
+    {
+      "id": 11,
+      "title": "go, have, get",
+      "details": "5 details lorem ipsum",
+      "complete": false,
+      "content": ["by bus", "for a walk", "home", "out", "shopping", "to a restaurant", "to bed", "to church", "to the beach", "back", "on holiday", "car", "long hair", "breakfast", "good time", "sandwich", "shower", "", "taxi", "email", "dressed", "home", "to the airport", "up"],
+      "loot": [{
+        "box": "1",
+        "star": "30",
+        "egg": "5"
+      }]
+    },
+    {
+      "id": 12,
+      "title": "the house",
+      "details": "6 details lorem ipsum ipsum lorem test ipsum lorem",
+      "complete": false,
+      "content": ["bathroom", "bedroom", "dining room", "garage", "garden", "hall", "kitchen", "living room", "a study", "toilet", "armchair", "bath", "bed", "carpet", "cooker", "cupboard", "dishwasher", "fireplace", "fridge", "a light", "microwave", "mirror", "plant", "shelf", "shower", "sofa", "wardrobe", "washing machine", "balcony", "ceiling", "floor", "stairs", "wall"],
+      "loot": [{
+        "box": "1",
+        "star": "30",
+        "egg": "5"
+      }]
+    }, 
+    {
+      "id": 13,
+      "title": "place and movement",
+      "details": "6 details lorem ipsum ipsum lorem test ipsum lorem",
+      "complete": true,
+      "content": ["in", "on front of", "on", "under", "behind", "between", "opposite", "next to", "over"],
+      "loot": [{
+        "box": "1",
+        "star": "30",
+        "egg": "5"
+      }]
+    },
+    {
+      "id": 14,
+      "title": "food and drink",
+      "details": "6 details lorem ipsum ipsum lorem test ipsum lorem",
+      "complete": false,
+      "content": ["bread", "butter", "cereal", "cheese", "coffee", "eggs", "jam", "orange juice", "milk", "sugar", "tea", "tost", "fish", "herbs", "meat", "oil", "pasta", "rice", "salad", "seafood", "spices", "carrots", "chips", "lettuce", "mushrooms", "onions", "peas", "peppers", "potatoes", "tomatoes", "apples", "bananas", "oranges", "a pineapple", "strawberries", "cake", "fruit salad", "ice cream", "biscuits", "chocolate", "crisps", "nuts", "sweets"],
+      "loot": [{
+        "box": "1",
+        "star": "30",
+        "egg": "5"
+      }]
+    },
+    {
+      "id": 15,
+      "title": "places and buildings",
+      "details": "6 details lorem ipsum ipsum lorem test ipsum lorem",
+      "complete": true,
+      "content": ["chemist", "church", "departmant store", "hospital", "market", "park", "police station", "post office", "shopping store", "supermarket", "town hall", "art gallery", "castle", "theatre", "zoo", "bridge", "bridge", "river", "road", "square", "street", "bus station", "car park", "railway station"],
+      "loot": [{
+        "box": "1",
+        "star": "30",
+        "egg": "5"
+      }]
+    }
+  ]
+}

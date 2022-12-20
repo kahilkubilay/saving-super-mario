@@ -1,19 +1,16 @@
-# saving-super-mario
+### SAVING-SUPER-MARIO
+###### word learning game with super-mario
 
-## Project setup
-```
-npm install
-```
+#### install
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+#### component structure
 
-### Compiles and minifies for production
-```
-npm run build
-```
+#### preview
+##### desktop
+##### mobile
+##### tablet
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#### todos
+
+- [ ] Move Assistant messages to a common component.
+- [ ] Edit the format on all components.
