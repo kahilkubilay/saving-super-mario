@@ -1,4 +1,5 @@
 <template>
+  <h2>{{ selectedWord }}</h2>
   <GoBack />
 
   <div class="game-area-capsule">
@@ -14,18 +15,27 @@
 
   <MiniAssistans :message="assistantMessage" />
   <Timer :time="time" :status="!wordGuessTurn" />
+  <GainGold :gold="gold" />
 </template>
 
 <script>
+import GainGold from '@/components/GainGold.vue'
 import MiniAssistans from '@/components/MiniAssistant.vue'
-import Timer from './components/Timer.vue'
 import GoBack from '@/components/GoBack.vue'
+import Timer from './components/Timer.vue'
 import WordSection from './components/WordSection.vue'
 import GuessWordInput from './components/GuessWordInput.vue'
 
 export default {
   props: ['id'],
-  components: { MiniAssistans, Timer, GoBack, WordSection, GuessWordInput },
+  components: {
+    MiniAssistans,
+    Timer,
+    GoBack,
+    WordSection,
+    GuessWordInput,
+    GainGold
+  },
   data() {
     return {
       uri: 'http://localhost:3000/sections/',
@@ -34,6 +44,7 @@ export default {
       guessWord: '',
       assistantMessage: '',
       time: 20,
+      gold: 100,
       wordGuessTurn: true,
       words: [],
       guessLetterList: [],
@@ -104,12 +115,12 @@ export default {
       }
     },
     correctAnswer(words) {
+      this.gold += 10
       this.resetData()
       this.getWords(words)
     },
     wrongAnswer() {},
     resetData() {
-      console.log('yeeess in here')
       this.guessLetter = ''
       this.guessWord = ''
       this.guessLetterList = []
