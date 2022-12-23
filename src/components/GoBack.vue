@@ -22,13 +22,13 @@ div.go-back-capsule {
 span {
   font-family: 'Courier New', Courier, monospace;
   font-size: 1.2em;
-  border: .2em solid #A4BE7B;
-  padding: .5em;
-  border-radius: .3em;
+  border: 0.2em solid #a4be7b;
+  padding: 0.5em;
+  border-radius: 0.3em;
   background: #285430;
 }
 
-div.go-back-capsule:hover>span {
-  border-color: #FF4500;
+div.go-back-capsule:hover > span {
+  border-color: #ff4500;
 }
 </style>

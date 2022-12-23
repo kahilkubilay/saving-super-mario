@@ -18,7 +18,7 @@
       "title": "classroom language",
       "details": "2 details lorem ipsum",
       "complete": false,
-      "content": ["open your books", "go to page 84", "do exercise a", "readt the text", "loot at the board", "close the door", "work in pairs", "answer the questions", "listen and repeat", "stand up", "sit down", "turn off your phone", "please stop talking", "can you repeat that", "i'm late", "i don't understand", "can i have a copy, please", "how do you spell it?", "I don't know", "how do you say gato in English?", "can you help me, please?", "what page is it?"],
+      "content": ["open your books", "go to page 84", "do exercise a", "read the text", "loot at the board", "close the door", "work in pairs", "answer the questions", "listen and repeat", "stand up", "sit down", "turn off your phone", "please stop talking", "can you repeat that", "i'm late", "i don't understand", "can i have a copy, please", "how do you spell it?", "I don't know", "how do you say gato in English?", "can you help me, please?", "what page is it?"],
       "suggestion": "",
       "loot": [{
         "box": "1",

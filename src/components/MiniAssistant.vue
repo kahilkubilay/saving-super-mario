@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  props: ['message'],
+  props: ['message']
 }
 </script>
 
@@ -18,7 +18,7 @@ export default {
 .assistant-capsule {
   display: flex;
   align-items: center;
-  background: #9ACD32;
+  background: #9acd32;
   padding: 1em;
   margin: 1em;
   position: absolute;
@@ -27,11 +27,9 @@ export default {
   border-radius: 1em;
 }
 
-.assistant-image-capsule {}
-
 .assistant-image-capsule img {
   width: 75px;
-  background: #FF4500;
+  background: #ff4500;
   border-radius: 1.2em;
   padding: 1em;
   margin-right: 2em;
