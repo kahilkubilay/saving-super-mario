@@ -26,7 +26,7 @@ export default {
 
 <style scoped>
 .start-game {
-  margin-top: 5em;
+  margin: 5em 0;
 }
 
 .start-game button {

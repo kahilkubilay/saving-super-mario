@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  props: ['time', 'status'],
+  props: ['time', 'status', 'life'],
   data() {
     return {
       guessTime: 10,
@@ -24,12 +24,19 @@ export default {
         if (this.guessTime === 0 || (!this.status && this.isStart)) {
           clearInterval(timer)
 
+          !this.guessTime && this.lostLife()
+
           this.isStart = this.status
           this.guessTime = 10
         }
       }
 
       const timer = setInterval(returnTimer, delay)
+    },
+    lostLife() {
+      const lastLifes = this.life - 1
+
+      this.$emit('life', lastLifes)
     }
   },
   computed: {

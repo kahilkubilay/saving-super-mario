@@ -6,15 +6,17 @@
     :loot="loot"
     :detail="detail"
     @getDetail="detail = $event" />
+  <LearningSection :words="words" />
 </template>
 
 <script>
 import GameArea from './components/GameArea.vue'
 import GoBack from '@/components/GoBack.vue'
+import LearningSection from './components/LearningSection.vue'
 
 export default {
   props: ['id'],
-  components: { GameArea, GoBack },
+  components: { GameArea, GoBack, LearningSection },
   data() {
     return {
       words: [],

@@ -74,13 +74,13 @@ export default {
     url('@/assets/fonts/prstart.ttf') format('truetype');
 }
 .gain-gold-capsule {
+  width: 10%;
   position: absolute;
-  right: 0;
-  bottom: 0;
   display: flex;
   align-items: center;
-  padding: 1em;
-  margin: 1em;
+  right: 0;
+  bottom: 0.5em;
+  margin: 1em 2em;
 }
 img {
   width: 1em;

@@ -1,5 +1,4 @@
 <template>
-  <h2>{{ selectedWord }}</h2>
   <GoBack />
 
   <div class="game-area-capsule">
@@ -14,8 +13,13 @@
   </div>
 
   <MiniAssistans :message="assistantMessage" />
-  <Timer :time="time" :status="!wordGuessTurn" />
+  <Timer
+    :time="time"
+    :status="!wordGuessTurn"
+    :life="life"
+    @life="life = $event" />
   <GainGold :gold="gold" />
+  <GameLife :lifes="life" />
 </template>
 
 <script>
@@ -25,6 +29,7 @@ import GoBack from '@/components/GoBack.vue'
 import Timer from './components/Timer.vue'
 import WordSection from './components/WordSection.vue'
 import GuessWordInput from './components/GuessWordInput.vue'
+import GameLife from './components/GameLife.vue'
 
 export default {
   props: ['id'],
@@ -34,7 +39,8 @@ export default {
     GoBack,
     WordSection,
     GuessWordInput,
-    GainGold
+    GainGold,
+    GameLife
   },
   data() {
     return {
@@ -45,6 +51,7 @@ export default {
       assistantMessage: '',
       time: 20,
       gold: 100,
+      life: 7,
       wordGuessTurn: true,
       words: [],
       guessLetterList: [],
@@ -72,7 +79,7 @@ export default {
   },
   methods: {
     getWords(wordList) {
-      this.words = wordList
+      this.words = wordList || this.words
 
       this.selectWord()
     },
@@ -110,8 +117,10 @@ export default {
 
         this.words = removedTrueWord
         this.correctAnswer(removedTrueWord)
+        console.info('<< yes, success >>')
       } else {
         console.error('<< no, false >>')
+        // this.wrongAnswer()
       }
     },
     correctAnswer(words) {
@@ -119,13 +128,22 @@ export default {
       this.resetData()
       this.getWords(words)
     },
-    wrongAnswer() {},
+    wrongAnswer() {
+      this.assistantMessage = `correct answer is ${this.selectedWord}`
+      this.resetData()
+      this.getWords()
+    },
     resetData() {
       this.guessLetter = ''
       this.guessWord = ''
       this.guessLetterList = []
       this.wordGuessTurn = !this.wordGuessTurn
     }
+  },
+  created() {
+    this.unwatch = this.$watch('life', () => {
+      this.wrongAnswer()
+    })
   }
 }
 </script>
