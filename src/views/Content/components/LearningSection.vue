@@ -22,7 +22,7 @@ export default {
   background: #285430;
   border: 0.2em solid hsl(83, 34%, 61%);
   padding: 1.5em 5em;
-  margin: 1em;
+  margin: 1em 5em;
 }
 
 .learning-section h2 {

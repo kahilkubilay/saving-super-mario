@@ -1,11 +1,12 @@
 <template>
   <div class="word-capsule">
-    <span
-      v-for="(letter, letterIndex) in word"
-      :key="letterIndex"
-      :class="{ spacePadding: letter === ' ' }">
-      {{ guess.includes(letter) ? letter : '_' }}
-    </span>
+    <div v-for="(letter, letterIndex) in word" :key="letterIndex">
+      <span v-if="guess.includes(letter)">{{ letter }}</span>
+      <span
+        v-else-if="letter === ' '"
+        :class="{ spacePadding: letter === ' ' }"></span>
+      <span v-else>_</span>
+    </div>
   </div>
 </template>
 
@@ -25,7 +26,7 @@ export default {
 }
 
 .spacePadding {
-  padding-right: 1.3em;
+  margin-right: 0.9em;
 }
 
 span {

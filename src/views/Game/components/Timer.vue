@@ -9,7 +9,7 @@ export default {
   props: ['status', 'life'],
   data() {
     return {
-      guessTime: 5,
+      guessTime: 10,
       isStart: false
     }
   },

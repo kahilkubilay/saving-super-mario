@@ -1,4 +1,7 @@
 <template>
+  <h2>{{ selectedWord }}</h2>
+  <h2>{{ guessWord }}</h2>
+  <h2>{{ guessLetterList }}</h2>
   <GoBack />
 
   <div class="game-area-capsule">
@@ -88,20 +91,21 @@ export default {
     writeLetter(e) {
       let letter = e.key
       let guessList = this.guessLetterList
+      let isIncludes = guessList.includes(letter)
       const checkKey = /^[a-zA-Z,.']+$/
 
       if (checkKey.test(letter)) {
-        if (this.selectedWord.includes(letter)) {
+        if (this.selectedWord.includes(letter) && !isIncludes) {
           this.wordGuessTurn = !this.wordGuessTurn
           this.assistantMessage = this.messageBag.guesTurn
-        } else if (guessList.includes(letter)) {
-          this.assistantMessage = this.messageBag.focus
-        } else {
-          this.assistantMessage = this.messageBag.tryAgain
-        }
+          this.guessLetter = letter
 
-        this.guessLetter = letter
-        guessList.push(letter)
+          guessList.push(letter)
+        } else {
+          this.assistantMessage = isIncludes
+            ? this.messageBag.focus
+            : this.messageBag.tryAgain
+        }
       }
     },
     writeGuess() {
@@ -115,7 +119,6 @@ export default {
         console.info('<< yes, success >>')
       } else {
         console.error('<< no, false >>')
-        // this.wrongAnswer()
       }
     },
     correctAnswer(words) {
@@ -124,9 +127,7 @@ export default {
       this.getWords(words)
     },
     wrongAnswer() {
-      this.assistantMessage = `correct answer is ${this.selectedWord}`
-      this.resetData()
-      this.getWords()
+      this.wordGuessTurn = !this.wordGuessTurn
     },
     resetData() {
       this.guessLetter = ''
