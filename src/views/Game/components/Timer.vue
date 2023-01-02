@@ -6,10 +6,10 @@
 
 <script>
 export default {
-  props: ['time', 'status', 'life'],
+  props: ['status', 'life'],
   data() {
     return {
-      guessTime: 10,
+      guessTime: 5,
       isStart: false
     }
   },
@@ -26,8 +26,8 @@ export default {
 
           !this.guessTime && this.lostLife()
 
-          this.isStart = this.status
           this.guessTime = 10
+          this.isStart = false
         }
       }
 
@@ -54,7 +54,7 @@ export default {
   display: flex;
   justify-content: center;
   position: absolute;
-  width: 25px;
+  width: 1.563em;
   top: 0;
   right: 0;
   margin: 2em;

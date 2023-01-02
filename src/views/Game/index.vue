@@ -13,11 +13,7 @@
   </div>
 
   <MiniAssistans :message="assistantMessage" />
-  <Timer
-    :time="time"
-    :status="!wordGuessTurn"
-    :life="life"
-    @life="life = $event" />
+  <Timer :status="!wordGuessTurn" :life="life" @life="life = $event" />
   <GainGold :gold="gold" />
   <GameLife :lifes="life" />
 </template>
@@ -49,7 +45,6 @@ export default {
       guessLetter: '',
       guessWord: '',
       assistantMessage: '',
-      time: 20,
       gold: 100,
       life: 7,
       wordGuessTurn: true,

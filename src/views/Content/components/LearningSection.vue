@@ -20,8 +20,9 @@ export default {
   display: flex;
   flex-direction: column;
   background: #285430;
-  border: 0.2em solid #a4be7b;
+  border: 0.2em solid hsl(83, 34%, 61%);
   padding: 1.5em 5em;
+  margin: 1em;
 }
 
 .learning-section h2 {
@@ -39,7 +40,7 @@ export default {
   justify-content: center;
   align-content: center;
   align-items: center;
-  width: 30%;
+  width: 50%;
   margin: 0 auto;
   flex-wrap: wrap;
   padding: 1em;

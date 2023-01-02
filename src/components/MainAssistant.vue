@@ -17,7 +17,6 @@ export default {
     return {
       detail: '',
       delay: 100,
-      test: ''
     }
   },
   methods: {

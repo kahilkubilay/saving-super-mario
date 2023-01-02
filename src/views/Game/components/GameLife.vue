@@ -1,14 +1,22 @@
 <template>
   <div class="heart-capsule">
-    <div class="capsule" v-for="life in lifes" :key="life">
-      <img src="@/assets/img/icon/heart.png" alt="" />
+    <div class="capsule" v-for="life in maxLife" :key="life">
+      <img
+        src="@/assets/img/icon/heart.png"
+        alt="heart icon"
+        :class="{ grayFilter: life > lifes }" />
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['lifes']
+  props: ['lifes'],
+  data() {
+    return {
+      maxLife: 7
+    }
+  }
 }
 </script>
 
@@ -29,5 +37,10 @@ export default {
 
 .heart-capsule img {
   width: 25px;
+}
+
+.grayFilter {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 </style>
