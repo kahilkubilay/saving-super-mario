@@ -1,7 +1,7 @@
 <template>
   <div class="game-loot">
     <div class="total-words">
-      <img src="@/assets/img/icon/box.png" alt="view of box from awards"/>
+      <img src="@/assets/img/icon/box.png" alt="view of box from awards" />
       <span>{{ loot.box }}</span>
     </div>
     <div class="loot">
@@ -30,7 +30,7 @@ export default {
 .game-loot div {
   display: flex;
   flex-direction: column;
-  margin-right: 2.5em;
+  margin: 0 0.6em;
 }
 
 .game-loot img {

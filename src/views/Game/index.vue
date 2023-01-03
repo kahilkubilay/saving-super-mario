@@ -1,11 +1,9 @@
 <template>
-  <h2>{{ selectedWord }}</h2>
-  <h2>{{ guessWord }}</h2>
-  <h2>{{ guessLetterList }}</h2>
   <GoBack />
 
   <div class="game-area-capsule">
-    <div class="game">
+    <GameDone v-if="done" :loot="loot" />
+    <div v-else class="game">
       <WordSection :word="selectedWord" :guess="guessLetterList" />
       <GuessWordInput
         :word="selectedWord"
@@ -29,6 +27,7 @@ import Timer from './components/Timer.vue'
 import WordSection from './components/WordSection.vue'
 import GuessWordInput from './components/GuessWordInput.vue'
 import GameLife from './components/GameLife.vue'
+import GameDone from './components/GameDone.vue'
 
 export default {
   props: ['id'],
@@ -39,7 +38,8 @@ export default {
     WordSection,
     GuessWordInput,
     GainGold,
-    GameLife
+    GameLife,
+    GameDone
   },
   data() {
     return {
@@ -51,13 +51,16 @@ export default {
       gold: 100,
       life: 7,
       wordGuessTurn: true,
+      done: false,
       words: [],
       guessLetterList: [],
       details: {},
+      loot: {},
       messageBag: {
         guesTurn: 'you can.. take a guess',
         focus: 'Hey, focus. You used this letter before',
-        tryAgain: 'try again!'
+        tryAgain: 'try again!',
+        done: 'yep Hero! You succeeded'
       }
     }
   },
@@ -68,6 +71,7 @@ export default {
       .then((data) => {
         this.details = data
         this.getWords((this.details || {}).content || [])
+        this.loot = ((this.details || {}).loot || [])[0] || {}
       })
       .catch((err) => console.log(err))
 
@@ -84,9 +88,15 @@ export default {
     selectWord() {
       let words = this.words
       let wordListLength = words.length - 1
-      let randomNumber = Math.round(Math.random() * wordListLength)
 
-      this.selectedWord = words[randomNumber]
+      if (wordListLength === -1) {
+        this.done = true
+        this.assistantMessage = this.messageBag.done
+      } else {
+        let randomNumber = Math.round(Math.random() * wordListLength)
+
+        this.selectedWord = words[randomNumber]
+      }
     },
     writeLetter(e) {
       let letter = e.key

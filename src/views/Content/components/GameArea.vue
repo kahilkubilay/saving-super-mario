@@ -11,7 +11,7 @@
 
 <script>
 import MainAssistant from '@/components/MainAssistant.vue'
-import PreviewLoot from './PreviewLoot.vue'
+import PreviewLoot from '@/components/PreviewLoot.vue'
 
 export default {
   components: { MainAssistant, PreviewLoot },

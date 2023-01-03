@@ -1,6 +1,6 @@
 <template>
   <div class="item-capsule">
-    <img :src="complete ? star : flower" alt="icon of status">
+    <img :src="complete ? star : flower" alt="icon of status" />
     <span>{{ text }}</span>
   </div>
 </template>
@@ -8,7 +8,7 @@
 <script>
 export default {
   props: ['cover', 'text', 'complete'],
-  data () {
+  data() {
     return {
       flower: require('@/assets/img/icon/flower.png'),
       star: require('@/assets/img/icon/colorful-star.png')
